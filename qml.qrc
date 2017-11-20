@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Indicator.qml</file>
+        <file>GRS.qml</file>
+        <file>Pipe.qml</file>
+        <file>Valve.qml</file>
+        <file>Passport.qml</file>
+        <file>ContextMenu.qml</file>
+    </qresource>
+</RCC>

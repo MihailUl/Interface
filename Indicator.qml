@@ -36,16 +36,14 @@ Rectangle {
         acceptedButtons: Qt.LeftButton | Qt.RightButton
         onClicked: {
             if (mouse.button == Qt.RightButton) {
-                var component = Qt.createComponent("Passport.qml");
-                var win = component.createObject(mainwindow);
-                win.show();
+                tmenu.open();
             }
              else{
                 parent.color = 'red';
-                CustomMenu {
-
-                }
             }
         }
+    }
+    CMenu {
+        id: tmenu
     }
 }

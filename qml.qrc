@@ -6,6 +6,6 @@
         <file>Pipe.qml</file>
         <file>Valve.qml</file>
         <file>Passport.qml</file>
-        <file>ContextMenu.qml</file>
+        <file>CMenu.qml</file>
     </qresource>
 </RCC>

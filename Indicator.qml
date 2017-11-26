@@ -33,6 +33,8 @@ Rectangle {
 
     MouseArea{
         anchors.fill: parent
+        hoverEnabled: true
+        cursorShape: Qt.CrossCursor
         acceptedButtons: Qt.LeftButton | Qt.RightButton
         onClicked: {
             if (mouse.button == Qt.RightButton) {

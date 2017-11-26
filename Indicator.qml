@@ -47,5 +47,6 @@ Rectangle {
     }
     CMenu {
         id: tmenu
+        x: indicator.x + indicator.width
     }
 }

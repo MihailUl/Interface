@@ -7,13 +7,13 @@ Menu {
         objectName: "cmenu"
         width: 100
         height: 100
-        MenuItem { text: "Паспорт";
+        MenuItem { text: "Паспорт"; width: cmenu.width;
                     onTriggered: {
                         var component = Qt.createComponent("Passport.qml");
                         var win = component.createObject(mainwindow);
                         win.show();
                     }
         }
-        MenuItem { text: "item2"; }
-        MenuItem { text: "item3"; }
+        MenuItem { text: "item2"; width: cmenu.width;}
+        MenuItem { text: "item3"; width: cmenu.width;}
 }

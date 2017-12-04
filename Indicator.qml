@@ -41,7 +41,9 @@ Rectangle {
                 tmenu.open();
             }
              else{
-                parent.color = 'red';
+                var component = Qt.createComponent("WindowChart.qml");
+                var win = component.createObject(mainwindow);
+                win.show();
             }
         }
     }

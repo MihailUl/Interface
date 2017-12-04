@@ -7,5 +7,6 @@
         <file>Valve.qml</file>
         <file>Passport.qml</file>
         <file>CMenu.qml</file>
+        <file>WindowChart.qml</file>
     </qresource>
 </RCC>

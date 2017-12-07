@@ -42,11 +42,12 @@ Rectangle {
             }
              else{
                 var component = Qt.createComponent("WindowChart.qml");
-                var win = component.createObject(mainwindow);
-                win.show();
+                var window = component.createObject(root);
+                window.show();
             }
         }
     }
+
     CMenu {
         id: tmenu
         x: indicator.x + indicator.width

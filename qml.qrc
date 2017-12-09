@@ -8,5 +8,6 @@
         <file>Passport.qml</file>
         <file>CMenu.qml</file>
         <file>WindowChart.qml</file>
+        <file>ChartT.qml</file>
     </qresource>
 </RCC>

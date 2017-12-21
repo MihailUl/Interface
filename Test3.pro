@@ -1,8 +1,8 @@
 TEMPLATE = app
 
-QT += qml quick charts
+QT += qml quick charts svg
+QTPLUGIN += qsvg
 CONFIG += c++11
-
 SOURCES += main.cpp \
     datacharts.cpp
 

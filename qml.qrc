@@ -9,5 +9,8 @@
         <file>CMenu.qml</file>
         <file>WindowChart.qml</file>
         <file>ChartT.qml</file>
+        <file>triangle_green.svg</file>
+        <file>triangle_red.svg</file>
+        <file>triangle_white.svg</file>
     </qresource>
 </RCC>

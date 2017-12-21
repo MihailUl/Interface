@@ -8,29 +8,32 @@ ChartView {
          antialiasing: true
 
          ValueAxis {
-                 id: axisY1
+                 id: axisY
                  min: -1
-                 max: 4
-             }
-
-             ValueAxis {
-                 id: axisY2
-                 min: -10
-                 max: 5
+                 max: 200
              }
 
              ValueAxis {
                  id: axisX
                  min: 0
-                 max: 10
+                 max: 20
              }
              LineSeries {
                     id: series1
                     axisX: axisX
                     axisY: axisY
+
                 }
 
-
+             Timer {
+                 id: refreshTimer
+                 interval: 1 / 60 * 1000 // 60 Hz
+                 running: true
+                 repeat: true
+                 onTriggered: {
+                     dataSource.update(chartView.series(1),chartView.axisX(),axi);
+                 }
+             }
                 Component.onCompleted: {
                    dataChart.getData(series1);
                 }

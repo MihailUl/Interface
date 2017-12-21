@@ -17,11 +17,13 @@ Q_SIGNALS:
 
 public slots:
     void getData(QAbstractSeries *series);
-    void update(QAbstractSeries *series);
+    void update(QAbstractSeries *series,QAbstractAxis *axisX,QAbstractAxis *axisY);
 
 private:
     QQmlApplicationEngine *m_appViewer;
     QList<QVector<QPointF> > m_data;
     int m_index;
+    int count_x;
+
 };
 #endif // DATACHARTS_H

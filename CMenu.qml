@@ -10,7 +10,7 @@ Menu {
         MenuItem { text: "Паспорт"; width: cmenu.width;
                     onTriggered: {
                         var component = Qt.createComponent("Passport.qml");
-                        var win = component.createObject(mainwindow);
+                        var win = component.createObject(root);
                         win.show();
                     }
         }

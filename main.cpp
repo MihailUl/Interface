@@ -5,6 +5,7 @@
 #include <QQmlApplicationEngine>
 #include <QtCore/QDir>
 #include "datacharts.h"
+#include <QtSvg>
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);

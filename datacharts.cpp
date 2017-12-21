@@ -1,5 +1,6 @@
 #include "datacharts.h"
 #include <QtCharts/QXYSeries>
+#include <QtCharts/QValueAxis>
 #include <QtCharts/QAreaSeries>
 #include <QtQuick/QQuickView>
 #include <QtQuick/QQuickItem>
@@ -20,17 +21,24 @@ DataCharts::DataCharts(QQmlApplicationEngine *appViewer, QObject *parent) :
     qRegisterMetaType<QAbstractAxis*>();
 }
 
-void DataCharts::update(QAbstractSeries *series)
+void DataCharts::update(QAbstractSeries *series,QAbstractAxis *axisX,QAbstractAxis *axisY)
 {
     if (series) {
         QXYSeries *xySeries = static_cast<QXYSeries *>(series);
-        m_index++;
-        if (m_index > m_data.count() - 1)
-            m_index = 0;
-
-        QVector<QPointF> points = m_data.at(m_index);
-        // Use replace instead of clear + append, it's optimized for performance
-        xySeries->replace(points);
+        QValueAxis *X = static_cast<QValueAxis *>(axisX);
+        QValueAxis *Y = static_cast<QValueAxis *>(axisY);
+        qreal x_max,y_max,x,y;
+        x_max = X->max();
+        y_max = Y->max();
+        if (count_x == x_max)
+        {
+            count_x = 0;
+            xySeries->clear();
+        }
+        x = count_x;
+        y = 2 * x + 1;
+        xySeries->insert(count_x,QPointF(x, y));
+        count_x ++;
     }
 }
 
@@ -39,24 +47,17 @@ void DataCharts::getData(QAbstractSeries* series)
     QXYSeries *xySeries = static_cast<QXYSeries *>(series);
 
     // Remove previous data
-    m_data.clear();
-    int rowCount, colCount;
-    rowCount = 5;
-    colCount = 6;
-    // Append the new data depending on the type
-    for (int i(0); i < rowCount; i++) {
-        QVector<QPointF> points;
-        points.reserve(colCount);
-        for (int j(0); j < colCount; j++) {
-            qreal x(0);
-            qreal y(0);
+    qreal x,y;
 
-                x = j;
-                y = i;
-            points.append(QPointF(x, y));
+    // Append the new data depending on the type
+    for (int i(0); i < count_x; i++) {
+                x = i;
+                y = 2 * x + 1;
             xySeries->insert(i,QPointF(x, y));
         }
-        m_data.append(points);
-    }
 
 }
+
+
+
+

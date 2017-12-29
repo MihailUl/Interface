@@ -26,13 +26,21 @@ Window  {
         id: gRS1
         x: 0
         y: 0
-        width: 400
-        height: 400
+        width: 100
+        height: 100
     }
 
+    Valve {
+        id: valve1
+        x: 427
+        y: 281
+        width: 100
+        height: 100
+    }
     /*Indicator {
         id: indicator1
         x: 196
         y: 47
     }*/
 }
+

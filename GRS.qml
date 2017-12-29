@@ -6,6 +6,11 @@ Image {
     id: grs
     objectName: "grs"
     transform: Scale { origin.x: grs.x; origin.y: grs.y; xScale: size; yScale: size}
+    MouseArea{
+        anchors.fill: parent
+        hoverEnabled: true
+        cursorShape: Qt.CrossCursor
+    }
     states: [
         State { name: "VALID"; when: color=="green"
         PropertyChanges { target: grs; source: "triangle_green.svg"}},

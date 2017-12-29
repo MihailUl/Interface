@@ -12,5 +12,8 @@
         <file>triangle_green.svg</file>
         <file>triangle_red.svg</file>
         <file>triangle_white.svg</file>
+        <file>valve_green.svg</file>
+        <file>valve_red.svg</file>
+        <file>valve_white.svg</file>
     </qresource>
 </RCC>

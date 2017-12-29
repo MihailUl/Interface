@@ -9,13 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 744.09448819 1052.3622047"
+   width="339.76801"
+   height="236.442"
+   viewBox="0 0 339.76801 236.44201"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="green_triangle.svg">
+   sodipodi:docname="triangle_green.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -35,7 +35,8 @@
      inkscape:window-height="744"
      inkscape:window-x="65"
      inkscape:window-y="24"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     units="px" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -51,7 +52,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(0,-815.92016)">
     <path
        sodipodi:type="star"
        style="opacity:1;fill:#00ff00;fill-opacity:1"
@@ -69,6 +71,6 @@
        d="M 304.28573,510.93364 54.375549,785.58742 -58.52652,431.83195 -171.42858,78.076494 191.38368,157.17817 554.19592,236.27984 Z"
        inkscape:transform-center-x="-3.3182589"
        inkscape:transform-center-y="-4.8261336"
-       transform="matrix(0.31289147,0.26989616,-0.3338353,0.24805003,421.09355,279.6733)" />
+       transform="matrix(0.31289147,0.26989616,-0.3338353,0.24805003,247.95067,843.38763)" />
   </g>
 </svg>
